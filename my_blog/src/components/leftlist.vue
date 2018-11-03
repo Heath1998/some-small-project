@@ -93,8 +93,6 @@ export default{
          this.middleList=this.articleObject
         }
         this.checkHasMore()
-        console.log(this.$route.path)
-        console.log(this.listItem)
     },
     mounted(){
         this.getIndexJson()

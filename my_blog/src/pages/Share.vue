@@ -16,7 +16,7 @@
 
 
 <script>
-import  header  from  '@/components/header'
+import  front  from  '@/components/head'
 import leftlist  from  '@/components/leftlist'
 import rightlist  from  '@/components/rightlist'
 import axios from 'axios'
@@ -31,7 +31,7 @@ export default{
         }
     },
     components:{
-        'ctx-header':header,
+        'ctx-header':front,
         'right-list':rightlist,
         'left-list':leftlist,
     },

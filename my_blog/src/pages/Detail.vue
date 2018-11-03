@@ -16,7 +16,7 @@
 
 
 <script>
-import  header  from  '@/components/header'
+import  front  from  '@/components/head'
 import temDetail  from  '@/components/temDetail'
 import rightlist  from  '@/components/rightlist'
 import axios from 'axios'
@@ -30,27 +30,11 @@ export default{
         }
     },
     components:{
-        'ctx-header':header,
+        'ctx-header':front,
         'right-list':rightlist,
         'ctx-detail':temDetail,
     },
-    methods:{
-        getDataArticle(){
-            axios.get('/api/article.json')
-            .then((res)=>{
-                this.list=res.data.article
-                 this.getFilterArticle()
-            })
-        },
-        getFilterArticle(){
-            this.Deliver=this.list.filter((x)=>{
-                return x.id==this.$route.query.aid
-            })
-        }
-    },
-    activated(){
-       this.getDataArticle()
-    },
+
     mounted(){
             var anchor = document.querySelector("#detail");
             // console.log(anchor,anchor.offsetTop);

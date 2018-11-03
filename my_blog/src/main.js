@@ -3,6 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+//引入font-awesome
+import 'font-awesome/css/font-awesome.css'
 // 引入element-ui组件
 import ElementUI from 'element-ui'
 

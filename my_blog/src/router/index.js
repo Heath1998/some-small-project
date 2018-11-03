@@ -4,7 +4,7 @@ import Home from '@/pages/Home'
 import Aboutme from '@/pages/Aboutme'
 import Share from '@/pages/Share'
 import Detail from '@/pages/Detail'
-
+import ArchivesDate from '@/pages/ArchivesDate'
 
 Vue.use(Router)
 
@@ -15,7 +15,7 @@ export default new Router({
       } else {
               var top;
               if (window.innerWidth >= 700) {
-                   top = 676
+                   top = 176
               } else {
                    top = 267
               }
@@ -45,6 +45,11 @@ export default new Router({
       path: '/Detail',
       name:'Detail',
       component:Detail
+    },
+    {
+      path: '/ArchivesDate',
+      name: 'ArchivesDate',
+      component: ArchivesDate
     }
   ]
 })

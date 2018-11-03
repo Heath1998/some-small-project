@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import  header  from  '@/components/header'
+import  front  from  '@/components/head'
 import leftlist  from  '@/components/leftlist'
 import rightlist  from  '@/components/rightlist'
 
@@ -28,7 +28,7 @@ export default{
         }
     },
     components:{
-        'ctx-header':header,
+        'ctx-header':front,
         'left-list':leftlist,
         'right-list':rightlist
     },

@@ -19,7 +19,7 @@
       <el-menu-item index="/Share?classify=杂谈">杂谈</el-menu-item>
       <el-menu-item index="/Share" v-show=false></el-menu-item>
       </el-submenu>
-      <el-menu-item index="/DetailText" >消息中心</el-menu-item>
+      <el-menu-item index="/ArchivesDate" >归档</el-menu-item>
       <el-menu-item index="/Aboutme">关于我</el-menu-item> 
       <div index="" class="pcsearchbox" >
         <i class="el-icon-search pcsearchicon">
@@ -36,7 +36,7 @@
     </div>
     <div class="header-img">
       <div class="header-img-scene">
-        <span>Hi,friend</span>
+        <span>社会后, 就不可再稚嫩了.</span>
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
 <script>
 
 export default {
-  name: 'header',
+  name: 'front',
   data(){
     return {
       index:'1',
@@ -98,7 +98,7 @@ export default {
   z-index: 99;
 }
 .header-img {
-	height: 650px;
+	height: 150px;
 	position: relative;
 	width: 100%;
 	background-size: cover;
@@ -106,25 +106,25 @@ export default {
 	background-repeat: no-repeat;
 	margin-bottom: 90px;
   overflow: hidden;
-  background-image:url("http://pic1.win4000.com/wallpaper/2018-01-19/5a618839efe5e.jpg");
+  background-image: url("http://t2.hddhhn.com/uploads/tu/20150700/0aiouvl1eom.jpg");
 }
 .header-img img{
   width: 100%;
 }
 .header-img-scene{
   position: absolute;
-  top: 260px;
+  top: 50px;
   width: 100%;
   left: 0px;
-  font-weight:200;
-  font-size: 100px;
+  font-weight:150;
+  font-size: 50px;
   text-align: center;
   font-family: 'Sigmar One', Arial;
-  color: #fff;
+  color: #000;
 }
 .header-img-scene span{
     font-family: 'Sigmar One', Arial;
-      text-shadow: 1px 1px 0 #ff3f1a, -1px -1px 0 #00a7e0;
+    text-shadow: 1px 1px 0 #ff3f1a, -1px -1px 0 #00a7e0;
 }
 
 /*pc搜索框*/
