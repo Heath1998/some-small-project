@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="mvvm.js"></script>
+    <script src="observe.js"></script>
+    <script src="compile.js"></script>
+    <script src="watcher.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input v-model="someStr" type="text">
+        <input type="text" v-model="child.someStr">
+        <p v-html="htmlStr"></p>
+        <p v-class="className" class="abc xyz ">
+          <p>{{getHelloWorld}}</p>
+        <button v-on:click="clickBtn">click</button>
+    </div>
+</body>
+<script>
+    var vm = new MVVM({
+        el:'#app',
+        data:{
+            text: 'hell1o',
+            someStr: 'hello',
+            className: 'btn',
+            htmlStr: '<span style="color: #f00;">this is a innerhtml</span>',
+            child:{
+                someStr:' world'
+            },
+        },
+        computed: {
+            getHelloWorld: function() {
+                return this.someStr + this.child.someStr;
+            }
+        },
+
+        methods: {
+            clickBtn: function(e) {
+                var randomStrArr = ['childOne', 'childTwo', 'childThree'];
+                this.child.someStr = randomStrArr[parseInt(Math.random() * 3)];
+            },
+            fun() {
+            console.log(this.age)
+        }
+        }
+    })
+    
+    console.log(document.getElementsByClassName('btn'))
+</script>
+</html>

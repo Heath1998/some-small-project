@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <script src="observer.js"></script>
+    <script src="MVVM.js"></script>
+    <script src="compiler.js"></script>
+    <script src="dependence.js"></script>
+    <script src="watcher.js"></script>
+    <script src="component.js"></script>
+</head>
+<body>
+    <div id="app">
+
+
+            <child message='messfather' ></child>
+    </div>
+</body>
+<script>
+    var vm = new MVVM({
+        el:'#app',
+        data:{
+            num: 1,
+            model: '这是双向绑定',
+            sty: 'color:red;',
+            messfather:'来自父组件的静态字符串',
+            messSportFather: '来自父组件的动态字符串 '
+        },
+
+        components:{
+        'child':{
+            props:["message"],
+            template:"<p >{{message}}</p>",
+        }
+    }
+    })
+
+    
+</script>
+<style type="text/css" >
+#app{
+  
+}
+#one{
+    border-bottom:2px solid blue;
+}
+#two{
+    border-bottom:2px solid blue;
+}
+#three{
+    border-bottom:2px solid blue;
+}
+</style>
+</html>
