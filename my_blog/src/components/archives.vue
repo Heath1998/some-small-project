@@ -45,7 +45,7 @@ export default{
 
 
 <style>
-a, a:hover{
+#contain-archives a, a:hover{
     color: #2479CC;
     text-decoration: none;
     font-size: 20px;

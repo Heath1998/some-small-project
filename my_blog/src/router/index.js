@@ -14,10 +14,10 @@ export default new Router({
         return savePosition;
       } else {
               var top;
-              if (window.innerWidth >= 700) {
+              if (window.innerWidth >= 600) {
                    top = 176
               } else {
-                   top = 267
+                   top = 150
               }
         return {
           x: 0,

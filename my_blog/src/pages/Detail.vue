@@ -2,15 +2,16 @@
     <div>
         <ctx-header></ctx-header>
     <div class="container" id="detail">
-        <el-row :gutter="30" type="flex" justify="center"> 
-            <el-col :span="13" class="left-col" >
+        <el-row :gutter="30"> 
+            <el-col :sm="24" :md="16" class="left-col" >
                 <ctx-detail :articleObject='Deliver'></ctx-detail>
             </el-col>
-            <el-col :span="6" class="right-col">
+            <el-col :sm="24" :md="8" class="right-col">
                 <right-list></right-list >
             </el-col>
         </el-row>
     </div>
+            <ctx-footer></ctx-footer>
     </div>
 </template>
 
@@ -19,6 +20,8 @@
 import  front  from  '@/components/head'
 import temDetail  from  '@/components/temDetail'
 import rightlist  from  '@/components/rightlist'
+import foot from '@/components/footer.vue'
+
 import axios from 'axios'
 
 export default{
@@ -33,6 +36,7 @@ export default{
         'ctx-header':front,
         'right-list':rightlist,
         'ctx-detail':temDetail,
+                'ctx-footer':foot
     },
 
     mounted(){

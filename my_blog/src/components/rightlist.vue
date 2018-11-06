@@ -42,6 +42,9 @@
                 <span>{{this.data_num}}</span>
             </div>
         </div>
+        <div class="addouter">
+
+        </div>
     </div>
 </template>
 
@@ -80,6 +83,9 @@ import axios from 'axios'
 
 
 <style>
+.addouter{
+    height: 200px;
+}
 .right-list{
     padding: 15px;
     background: #fff;
@@ -87,7 +93,7 @@ import axios from 'axios'
     margin-bottom:20px;
 }
 .right-list:hover{
-        transform: translate(0,-2px);
+    transform: translate(0,-2px);
     box-shadow:0 15px 30px rgba(0,0,0,.1);
 }
 .right-list-img{
@@ -96,6 +102,8 @@ import axios from 'axios'
 
 .right-list-img img{
     width: 100%;
+    border-radius:50%; 
+    overflow:hidden;
 }
 .right-list-body p{
     font-size: 14px;

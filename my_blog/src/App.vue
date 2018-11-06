@@ -1,6 +1,6 @@
 <template>
   <div >
-    <keep-alive >
+    <keep-alive :include="['']">
     <router-view></router-view> 
     </keep-alive>
   </div>
@@ -80,5 +80,40 @@ html{-webkit-text-size-adjust:none;width:100%;height:100% } /*????iphone??safari
 input[type="text"], input[type="button"], input[type="submit"], input[type="search"]{
   -webkit-appearance:none;
   border-radius:0;
+}
+
+/*适配*/
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+
+@media screen and  (max-width:600px){
+    .pcMenu{
+      display: none;
+    }
+    .mobileBox{
+      display: block;
+    }
+    .container{
+        max-width: 100%!important;
+        margin:0 auto;
+    }
+    .header-img-scene{
+      font-size: 26px!important;
+      top: 75px!important;
+    }
+}
+
+@media screen and  (min-width:601px){
+    .pcMenu{
+      display: block;
+    }
+    .mobileBox{
+      display: none;
+    }
 }
 </style>

@@ -2,15 +2,16 @@
     <div class="a">
         <ctx-header></ctx-header>
         <div class="container">
-        <el-row :gutter="30" type="flex" justify="center"> 
-            <el-col :span="13" class="left-col" >
+        <el-row :gutter="30" > 
+            <el-col :sm="24" :md="16" class="left-col" >
                 <left-list :articleObject='articleObject' ref="leftMore"></left-list>
             </el-col>
-            <el-col :span="6" class="right-col">
+            <el-col :sm="24"  :md="8" class="right-col">
                 <right-list></right-list >
             </el-col>
         </el-row>
         </div>
+        <ctx-footer></ctx-footer>
     </div>
 </template>
 
@@ -18,6 +19,7 @@
 import  front  from  '@/components/head'
 import leftlist  from  '@/components/leftlist'
 import rightlist  from  '@/components/rightlist'
+import foot from '@/components/footer.vue'
 
 import axios from 'axios'
 export default{
@@ -30,7 +32,8 @@ export default{
     components:{
         'ctx-header':front,
         'left-list':leftlist,
-        'right-list':rightlist
+        'right-list':rightlist,
+        'ctx-footer':foot
     },
     methods:{
         getIndexJson(){
@@ -48,7 +51,6 @@ export default{
 </script>
 
 <style>
-.left-col{
-    height: 2000px;
-}
+
+
 </style>

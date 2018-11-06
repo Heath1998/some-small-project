@@ -110,7 +110,7 @@ export default{
     margin-bottom:30px; 
 }
 .left-list-title{
-    height: 124px;
+   
     text-align: center;
     color: #444;
     font-size: 28px;

@@ -25,6 +25,7 @@ export default{
 .left-introduce{
     background: #fff;
     padding: 20px;
+    margin-bottom:50px; 
 }
 .left-introduce h1{
     padding: 10px 0;
