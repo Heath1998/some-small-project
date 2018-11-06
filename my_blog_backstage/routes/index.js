@@ -27,7 +27,7 @@ router.get('/api/addfavour', function(req, res, next) {
 
 
 //返回文章html
-const template = "<div class='vs'>{{{content}}}</div>";
+const template = "<div class='markdown-body'>{{{content}}}</div>";
 router.get('/api/article', function(req, res, nex) {
   
   var filePath = './public/article/savemd/' + req.query.aid + '.md'
